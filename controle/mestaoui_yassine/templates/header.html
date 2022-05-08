@@ -12,10 +12,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{% url 'allcomptes' %}">Compte</a>
+                    <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Accueil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{% url 'allclients' %}">Client</a>
+                    <a class="nav-link active" aria-current="page" href="{% url 'allcomptes' %}">Comptes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'allclients' %}">Clients</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'admin' %}">Admin</a>
                 </li>
             </ul>
         </div>

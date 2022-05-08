@@ -5,7 +5,7 @@
         <div class="row page-titles mx-0 justify-content-center">
             <div class="col-sm-6 p-md-0">
                 <div class="row">
-                    <h1 class="mt-2 mb-2 text-center text-primary">Liste des clients</h1>
+                    <h1 class="mt-2 mb-2 text-center text-primary">Liste des comptes</h1>
                 </div>
             </div>
         </div>
@@ -15,28 +15,30 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="input-group mb-3">
-                            <form action="{% url 'searchclient' %}" method="get">
-                                <input type="text" name="search" placeholder="Recherche par nom"
+                            <form action="{% url 'searchcompte' %}" method="get">
+                                <input type="text" name="search" placeholder="Recherche par numero"
                                        value="{{request.GET.search}}">
                                 <button type="submit" class="btn btn-outline-primary">Recherche</button>
                             </form>
                         </div>
                         <div class="table-responsive pre-scrollable">
-                            {% if clients %}
+                            {% if comptes %}
                             <table class="table table-hover">
                                 <thead>
                                 <tr align="center">
-                                    <th>Code</th>
-                                    <th>Nom</th>
-                                    <th>Prenom</th>
+                                    <th>Numéro</th>
+                                    <th>Solde</th>
+                                    <th>Date</th>
+                                    <th>Client</th>
                                 </tr>
                                 </thead>
-                                <tbody class="" id="patient-item">
-                                {% for c in clients %}
+                                <tbody class="" id="compte">
+                                {% for c in comptes %}
                                 <tr>
-                                    <td align="center">{{c.code}}</td>
-                                    <td align="center">{{c.nom}}</td>
-                                    <td align="center">{{c.prenom}}</td>
+                                    <td align="center">{{c.numero}}</td>
+                                    <td align="center">{{c.solde}}</td>
+                                    <td align="center">{{c.date}}</td>
+                                    <td align="center">{{c.client}}</td>
                                 </tr>
                                 {% endfor %}
                                 </tbody>
